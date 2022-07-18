@@ -1,7 +1,6 @@
-html
-  head
-    title= title
-  body
+extends layouts/main-layout.pug
+
+block content
     h1= message
-    a(href="/login") Login 
-    a(href="/register") Register 
+    a(href="/login") Login
+    a(href="/register") Register

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const {
   setupKinde,
@@ -8,9 +9,9 @@ const app = express();
 const port = 3000;
 
 const config = {
-  issuerBaseUrl: process.env.KINDE_DOMAIN,
-  domain: process.env.KINDE_SECRET,
-  secret: process.env.BASE_URL,
+  issuerBaseUrl: process.env.BASE_URL,
+  domain: process.env.KINDE_DOMAIN,
+  secret: process.env.KINDE_SECRET,
   redirectUrl: process.env.REDIRECT_URL,
   unAuthorisedUrl: process.env.UNAUTHORISED_URL,
 };
@@ -25,8 +26,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/logged_in", protectRoute, getUser, (req, res) => {
-  res.render("logged_in", {
+app.get("/admin", protectRoute, getUser, (req, res) => {
+  res.render("admin", {
     title: "Get in!",
     message: `you are logged in ${req.user.first_name}!`,
   });
