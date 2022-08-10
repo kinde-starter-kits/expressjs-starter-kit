@@ -1,5 +1,20 @@
 extends layouts/main-layout.pug
 
 block content
-    h1= message
-    a(href="/logout") Logout
+
+    header
+        nav.nav.container
+            h1.text-display-3 KindeAuth
+            .profile-blob
+                .avatar #{user.first_name[0]}#{user.last_name[0]}
+                div
+                    p.text-heading-2 #{user.first_name} #{user.last_name}
+                    a.text-subtle(href='/logout') Sign out
+    main
+        .container
+            .card.start-hero
+                p.text-body-2.start-hero-intro Woohoo!
+                p.text-display-2 Your authentication is all sorted.
+                p.text-display-2 Build the important stuff.
+            section.next-steps-section
+                h2.text-heading-1 Next steps for you

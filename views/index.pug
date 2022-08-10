@@ -1,6 +1,17 @@
 extends layouts/main-layout.pug
 
 block content
-    h1= message
-    a(href="/login") Login
-    a(href="/register") Register
+
+        header
+            nav.nav.container
+                h1.text-display-3 KindeAuth
+                div
+                    a.btn.btn-ghost.sign-in-btn(href='/login') Sign in
+                    a.btn.btn-dark(href='/register') Sign up
+        main
+            .container
+                .card.hero
+                    p.text-display-1.hero-title Let&apos;s start authenticating
+                    p.text-display-1.hero-title  with KindeAuth
+                    p.text-body-1.hero-tagline Configure your app
+                    a.btn.btn-light.btn-big(href='https://kinde.com/docs/sdks/nextjs-sdk' target='_blank' rel='noreferrer') Go to docs
