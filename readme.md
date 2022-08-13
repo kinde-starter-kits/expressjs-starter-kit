@@ -10,7 +10,9 @@ Clone this repo and install dependencies with `npm i`
 
 Make a copy of `.env_sample` and name it simply `.env`. Set the following variables with the details from the Kinde `App Keys` page
 
-> KINDE_ISSUER_URL - The token host value KINDE_CLIENT_SECRET - The client secret
+> KINDE_ISSUER_URL - The token host value
+>
+> KINDE_CLIENT_SECRET - The client secret
 
 e.g
 
@@ -35,4 +37,4 @@ You will also need to set the url they will be redirected to upon logout. Set th
 
 `npm start` and navigate to `http://localhost:3000`.
 
-Click on `Sign up` and register your first user for your business!
+Click on `Sign up` and register your first user for your business! 🚀
