@@ -10,14 +10,13 @@ Clone this repo and install dependencies with `npm i`
 
 Make a copy of `.env_sample` and name it simply `.env`. Set the following variables with the details from the Kinde `App Keys` page
 
-> KINDE_ISSUER_URL - The token host value
->
-> KINDE_CLIENT_SECRET - The client secret
+> KINDE_ISSUER_URL - The token host value KINDE_CLIENT_ID - The client id KINDE_CLIENT_SECRET - The client secret
 
 e.g
 
 ```
 KINDE_ISSUER_URL=https://your_kinde_subdomain.kinde.com
+KINDE_CLIENT_ID=yourId5romKind3
 KINDE_CLIENT_SECRET=some5ecretFromappKey5pag3
 ```
 
