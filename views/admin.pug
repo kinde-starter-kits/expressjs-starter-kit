@@ -6,9 +6,9 @@ block content
         nav.nav.container
             h1.text-display-3 KindeAuth
             .profile-blob
-                .avatar #{user.first_name[0]}#{user.last_name[0]}
+                .avatar #{user.given_name[0]}#{user.given_name[1]}
                 div
-                    p.text-heading-2 #{user.first_name} #{user.last_name}
+                    p.text-heading-2 #{user.given_name} #{user.family_name}
                     a.text-subtle(href='/logout') Sign out
     main
         .container

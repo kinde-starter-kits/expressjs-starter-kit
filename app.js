@@ -8,8 +8,8 @@ const {
 const app = express();
 const port = 3000;
 app.use(express.static("public"));
-
 const config = {
+  clientId: process.env.KINDE_CLIENT_ID,
   issuerBaseUrl: process.env.KINDE_ISSUER_URL,
   siteUrl: process.env.KINDE_SITE_URL,
   secret: process.env.KINDE_CLIENT_SECRET,
