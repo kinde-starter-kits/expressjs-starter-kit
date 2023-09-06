@@ -19,9 +19,9 @@ KINDE_CLIENT_SECRET - The client secret
 e.g
 
 ```
-KINDE_ISSUER_URL=https://your_kinde_subdomain.kinde.com
-KINDE_CLIENT_ID=yourId5romKind3
-KINDE_CLIENT_SECRET=some5ecretFromappKey5pag3
+KINDE_ISSUER_URL=https://<your_kinde_subdomain>.kinde.com
+KINDE_CLIENT_ID=<your_kinde_client_id>
+KINDE_CLIENT_SECRET=<your_kinde_client_secret>
 ```
 
 ## Set your Callback and Logout URLs
