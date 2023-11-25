@@ -4,6 +4,7 @@ const {
   setupKinde,
   protectRoute,
   getUser,
+  isAuthenticated,
 } = require("@kinde-oss/kinde-node-express");
 const app = express();
 const port = 3000;
@@ -13,14 +14,15 @@ const config = {
   issuerBaseUrl: process.env.KINDE_ISSUER_URL,
   siteUrl: process.env.KINDE_SITE_URL,
   secret: process.env.KINDE_CLIENT_SECRET,
-  redirectUrl: process.env.KINDE_POST_LOGOUT_REDIRECT_URL,
+  redirectUrl: process.env.KINDE_REDIRECT_URL,
+  unAuthorisedUrl: process.env.KINDE_SITE_URL,
 };
 
 app.set("view engine", "pug");
 setupKinde(config, app);
 
-app.get("/", (req, res) => {
-  if (req.session && req.session.kindeAccessToken) {
+app.get("/", async (req, res) => {
+  if (await isAuthenticated(req)) {
     res.redirect("/admin");
   } else {
     res.render("index", {
