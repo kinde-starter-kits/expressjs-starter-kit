@@ -2,14 +2,15 @@ require("dotenv").config();
 const express = require("express");
 const {
   setupKinde,
-  protectRoute,
-  getUser,
   isAuthenticated,
+  kindeMiddlewares,
+  GrantType,
 } = require("@kinde-oss/kinde-node-express");
 const app = express();
 const port = 3000;
 app.use(express.static("public"));
 const config = {
+  grantType: GrantType.AUTHORIZATION_CODE,
   clientId: process.env.KINDE_CLIENT_ID,
   issuerBaseUrl: process.env.KINDE_ISSUER_URL,
   siteUrl: process.env.KINDE_SITE_URL,
@@ -18,6 +19,7 @@ const config = {
   unAuthorisedUrl: process.env.KINDE_SITE_URL,
 };
 
+const { protectRoute, getUser } = kindeMiddlewares;
 app.set("view engine", "pug");
 setupKinde(config, app);
 
