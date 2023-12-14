@@ -17,6 +17,7 @@ const config = {
   secret: process.env.KINDE_CLIENT_SECRET,
   redirectUrl: process.env.KINDE_REDIRECT_URL,
   unAuthorisedUrl: process.env.KINDE_SITE_URL,
+  postLogoutRedirectUrl: process.env.KINDE_POST_LOGOUT_REDIRECT_URL,
 };
 
 const { protectRoute, getUser } = kindeMiddlewares;
