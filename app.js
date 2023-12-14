@@ -15,6 +15,7 @@ const config = {
   issuerBaseUrl: process.env.KINDE_ISSUER_URL,
   siteUrl: process.env.KINDE_SITE_URL,
   secret: process.env.KINDE_CLIENT_SECRET,
+  redirectUrl: process.env.KINDE_REDIRECT_URL,
   unAuthorisedUrl: process.env.KINDE_SITE_URL,
 };
 
