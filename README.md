@@ -63,7 +63,7 @@ On the App Keys page set `Redirect url` to `http://localhost:3000/kinde_callback
 
 You will also need to set the url they will be redirected to upon logout. Set the `Logout url` to http://localhost:3000.
 
-## Start the app
+### Start the app
 
 `npm start` and navigate to `http://localhost:3000`.
 
