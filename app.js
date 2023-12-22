@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const {
   setupKinde,
-  isAuthenticated,
-  kindeMiddlewares,
+  protectRoute,
+  getUser,
   GrantType,
 } = require("@kinde-oss/kinde-node-express");
 const app = express();
@@ -20,12 +20,11 @@ const config = {
   postLogoutRedirectUrl: process.env.KINDE_POST_LOGOUT_REDIRECT_URL,
 };
 
-const { protectRoute, getUser } = kindeMiddlewares;
 app.set("view engine", "pug");
-setupKinde(config, app);
+const client = setupKinde(config, app);
 
 app.get("/", async (req, res) => {
-  if (await isAuthenticated(req)) {
+  if (await client.isAuthenticated(req)) {
     res.redirect("/admin");
   } else {
     res.render("index", {
