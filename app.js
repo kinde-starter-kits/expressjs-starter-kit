@@ -39,6 +39,6 @@ app.get("/admin", protectRoute, getUser, (req, res) => {
   });
 });
 
-app.listen(port, function () {
+app.listen(port, () => {
   console.log(`Kinde Express Starter Kit listening on port ${port}!`);
 });
