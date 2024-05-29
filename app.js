@@ -1,11 +1,9 @@
-require("dotenv").config();
-const express = require("express");
-const {
-  setupKinde,
-  protectRoute,
-  getUser,
-  GrantType,
-} = require("@kinde-oss/kinde-node-express");
+import dotenv from "dotenv";
+dotenv.config();
+
+import { setupKinde, protectRoute, getUser, GrantType } from "@kinde-oss/kinde-node-express";
+import express from "express";
+
 const app = express();
 const port = 3000;
 app.use(express.static("public"));
