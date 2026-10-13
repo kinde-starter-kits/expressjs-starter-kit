@@ -11,7 +11,7 @@
   "author": "engineering@kinde.com",
   "license": "ISC",
   "dependencies": {
-    "@kinde-oss/kinde-node-express": "^1.6.0",
+    "@kinde-oss/kinde-node-express": "^1.7.0",
     "dotenv": "^16.4.5",
     "express": "^4.22.3",
     "nodemon": "^3.1.2",
